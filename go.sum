@@ -1,0 +1,4 @@
+github.com/afa7789/satsukashii v0.0.0-20250407212905-332fd43ac516 h1:SfX/InIm7qh+hs1MPJ33i65J0m8PgxVHSXT4ZpEgG38=
+github.com/afa7789/satsukashii v0.0.0-20250407212905-332fd43ac516/go.mod h1:XInTwSobtMPziK+oDzAoCS1ghF3/6m8SPimuUcol37I=
+github.com/mattn/go-sqlite3 v1.14.24 h1:tpSp2G2KyMnnQu99ngJ47EIkWVmliIizyZBfPrBWDRM=
+github.com/mattn/go-sqlite3 v1.14.24/go.mod h1:Uh1q+B4BYcTPb+yiD3kU8Ct7aC0hY9fxUwlHK0RXw+Y=
