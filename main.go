@@ -28,7 +28,9 @@ func main() {
 	// 	price.Open, price.High, price.Low, price.Close)
 
 	// Fetch historical data after a date
-	startDate, _ := time.Parse("2006-01-02", "2016-01-01")
+	startYear := "2016"
+	endYear := "2025"
+	startDate, _ := time.Parse("2006-01-02", startYear+"-01-01")
 	prices, err := fetcher.FetchHistoricalData(startDate)
 	if err != nil {
 		log.Fatalf("Failed to fetch historical data: %v", err)
@@ -61,7 +63,7 @@ func main() {
 
 	// Calculate weekly investments on every Friday from 2016-01-01 to 2025-05-01
 	// startDate, _ := time.Parse("2006-01-02", "2016-01-01")
-	endDate, _ := time.Parse("2006-01-02", "2025-05-01")
+	endDate, _ := time.Parse("2006-01-02", endYear+"-05-01")
 
 	var totalInvested float64
 	var bitcoinAccum float64
@@ -130,7 +132,7 @@ func main() {
 		yellow, moneroAccum, reset,
 		endDate.Format("2006-01-02"),
 		yellow, finalMoneroValue, reset)
-	fmt.Printf("Amount got per week for:\n\tBitcoin: $%s%.6f%s,\n\tMonero: $%s%.6f%s\n",
+	fmt.Printf("Amount got per week for:\n\tBitcoin: $%s%.2f%s,\n\tMonero: $%s%.2f%s\n",
 		yellow, finalBitcoinValue/float64(weeks), reset,
 		yellow, finalMoneroValue/float64(weeks), reset)
 	fmt.Printf("Total value of:\n\tBitcoin: %s$%.2f%s,\n\tMonero: %s$%.2f%s\n",
